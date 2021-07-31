@@ -1,18 +1,33 @@
+/*p.165 ì‹¤ìŠµë¬¸ì œ4
+ì˜ˆì‹œ ìž…ë ¥ 1 
+ì†Œë¬¸ìž ì•ŒíŒŒë²³ í•˜ë‚˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤>>e
+ì˜ˆì‹œ ì¶œë ¥ 1
+abcde
+abcd
+abc
+ab
+a
+ì˜ˆì‹œ ìž…ë ¥ 2 
+ì†Œë¬¸ìž ì•ŒíŒŒë²³ í•˜ë‚˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤>>*
+ì˜ˆì‹œ ì¶œë ¥ 2
+ìž˜ëª» ìž…ë ¥í–ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ìž…ë ¥í•˜ì‹œì˜¤>>
+*/
+
 import java.util.Scanner;
 public class Main3alpabet {
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("¼Ò¹®ÀÚ ¾ËÆÄºª ÇÏ³ª¸¦ ÀÔ·ÂÇÏ½Ã¿À>>");
+		System.out.print("ì†Œë¬¸ìž ì•ŒíŒŒë²³ í•˜ë‚˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤>>");
 		do {
 			String At = scanner.next();
 			char chAt = At.charAt(0);
 			if ((int)chAt<97||(int)chAt>122) {
-				System.out.print("Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇÏ½Ã¿À>>");
+				System.out.print("ìž˜ëª» ìž…ë ¥í–ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ìž…ë ¥í•˜ì‹œì˜¤>>");
 				continue;}
 			for(int i=0;i<=chAt-'a';i++) {
 				for(char j='a';j<=chAt-i;j++) System.out.print(j); 
 		    System.out.println();}
-		    break;//break¹® ¾È ¾²¸é ¹«ÇÑ·çÇÁ¸¦ ºüÁ®³ª¿Ã ¼ö ¾ø¾î while¹® µÚ ÄÚµå°¡ ¾Æ¹« ÀÇ¹Ì ¾ø¾îÁü.
+		    break;//breakë¬¸ ì•ˆ ì“°ë©´ ë¬´í•œë£¨í”„ë¥¼ ë¹ ì ¸ë‚˜ì˜¬ ìˆ˜ ì—†ì–´ whileë¬¸ ë’¤ ì½”ë“œê°€ ì•„ë¬´ ì˜ë¯¸ ì—†ì–´ì§.
 		} while(true);
 		scanner.close();
 	}
